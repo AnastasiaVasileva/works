@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*ЛОГОТИП*/
+header {
+    background: #222222;
+    padding: 8px 0;
+}
+.top_wrap {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #ddffdd;
+}
+.top_wrap > div {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 80%;
+    margin: 0 auto;
+}
+.top_wrap .description {
+    flex-basis: 40%;
+    color: #a9abaa;
+    font-size: 13px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+/*МЕНЮ*/
+.menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom:1px solid #dfdfdf ;
+}
+.menu nav > ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+}
+.menu nav > ul li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+.menu nav > ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2.25vh;
+}
+.menu .submenu {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    padding: 10px;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    top: 40px;
+}
+.menu .submenu li {
+    padding: 5px;
+}
+.menu .submenu li a {
+    color: white;
+}
+.menu nav > ul li:hover .submenu {
+    display: block;
+}
+.menu .submenu li a:hover {
+    text-decoration: underline;
+}
+.menu form input {
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    padding: 5px;
+}
+.menu form button {
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+.menu img {
+    position: absolute;
+    right: 20px;
+    bottom: -5px;
+} 
+/*СОЦ ИКОНКИ*/
+.soc_icons p {
+    font-size: 14px;
+    color: #757575;
+}
+.soc_icons p a {
+    color: #00a1ad;
+    margin: 0 3px;
+}
+/*Баннер со слайдером*/
+.banner .slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.banner .slider .arrow_left {
+    background: url("../images/alb.png") no-repeat center center;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+}
+.banner .slider .arrow_right {
+    background: url("../images/arb.png") no-repeat center center;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+.banner .slider .foto {
+    height: 370px;
+    flex-basis: 100%;
+    background: url("../images/slider.jpg") no-repeat center bottom/cover;
+}
+.banner .slider .foto p {
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    position: absolute;
+    padding: 10px;
+    left: 20px;
+    bottom: 10px;
+    font-size: 20px;
+}
+.slider_switch {
+    text-align: center;
+    margin-top: 10px;
+}
+.slider_switch span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: 2px solid #278a87;
+    cursor: pointer;
+}
+.slider_switch .active {
+    background: #efc01a;
+}
+/*Блок контент новости и услуги*/
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+section {
+    flex-basis: 27%;
+}
+section h2 {
+    border-left: 3px solid #83b85c;
+    padding-left: 5px;
+    font-weight: normal;
+}
+article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+article img {
+    border-radius: 100%;
+    height: 70px;
+}
+article p {
+    flex-basis: 70%;
+}
+section aside {
+    background: url("../images/aside.jpg") no-repeat center top/cover;
+    height: 200px;
+    position: relative;
+}
+section aside p {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin: 0;
+}
+article p a {
+    text-decoration: none;
+    color: black;
+}
+/*Блок с услугами*/
+.content .right {
+    flex-basis: 70%;
+}
+.content .right .wrap_title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrap_title img {
+    width: 100%;
+}
+/*Контэйнер с услугой*/
+.wrap_title .title {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    position: relative;
+}
+.wrap_title .icons {
+    position: absolute;
+    padding: 5px;
+    display: none;
+}
+.wrap_title .title:hover .icons {
+    display: block;
+}
+.wrap_title .icons span {
+    display: inline-block;
+    font-size: 18px;
+    color: #919191;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 8px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.wrap_title .icons span:hover {
+    background: rgba(33, 198, 74, 0.5);
+    transition: 0.8s;
+}
+.wrap_title h3 {
+    color: #595858;
+}
+.wrap_title p {
+    color: #8d8d8d;
+}
+.wrap_title .title .bottom {
+    border-top: 1px solid #c9c9c9;
+    border-bottom: 1px solid #c9c9c9;
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.wrap_title .title .bottom span {
+    color: #bab6b6;
+}
+.wrap_title .title .bottom a {
+    color: #83b85c;
+    text-decoration: none;
+}
+.wrap_title .title .bottom a:hover {
+    text-decoration: underline;
+}
+.pagination {
+    text-align: center;
+}
+.pagination span {
+    display: inline-block;
+    background: #13a2b2;
+    color: white;
+    width: 20px;
+    padding: 3px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.pagination span:hover {
+    background: #8dca3e;
+}
+/*Галерея*/
+.gallery h2 {
+    border-left: 3px solid #83b85c;
+    padding-left: 5px;
+    font-weight: normal;
+    width: 80%;
+    margin: 40px auto 20px;
+}
+.gallery .slider_2 .arrow_left {
+    background: url("../images/arrow_left.png") no-repeat center center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+.gallery .slider_2 .arrow_right {
+    background: url("../images/arrow_right.png") no-repeat center center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+.gallery .slider_2 {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d7;
+    padding: 5px 0 3px;
+}
+footer {
+    margin-top: 20px;
+}
+footer nav {
+    background: #19a2ac;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 60%;
+    height: 100%;
+    padding: 0;
+}
+footer nav ul li {
+    list-style-type: none;
+    height: 100%;
+    flex-basis: 100%;
+}
+footer nav ul li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+footer nav ul li a:hover {
+    background: #128991;
+}
+footer .titles {
+    background: #272727;
+    padding: 10px 0;
+}
+footer .titles .links {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+footer .titles .links div {
+    background: #3e3e3e;
+    padding: 10px 0;
+    flex-basis: 40%;
+    text-align: center;
+}
+footer .titles .links div a {
+    color: #dedede;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin: 5px 0;
+}
+footer .titles .links div a:hover {
+    text-decoration: underline;
+}
+footer .titles .links div a::before {
+    content: "\00BB";
+    margin-right: 10px;
+    color: #8cc34c;
+}
+footer p {
+    text-align: center;
+}
+
+
